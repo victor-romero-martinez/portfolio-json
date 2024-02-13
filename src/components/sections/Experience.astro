@@ -1,0 +1,85 @@
+---
+import Section from "@/components/Section.astro";
+import { getYearsFn } from "@/lib/getYearsFn";
+import YearsComponent from "@/components/ui/YearsComponent.astro";
+
+import { work } from "@cv";
+---
+
+<Section title="Experiencia laboral">
+  <ul>
+    {
+      work.map(
+        ({ name, startDate, endDate, position, category, summary, url }) => {
+          const years = getYearsFn(startDate, endDate);
+
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>
+                      {url ? (
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                          {name}
+                        </a>
+                      ) : (
+                        <span>{name}</span>
+                      )}
+                    </h3>
+                    <h4>
+                      <span>
+                        {category} • {position}
+                      </span>
+                    </h4>
+                  </div>
+
+                  <YearsComponent>{years}</YearsComponent>
+                </header>
+
+                <footer>
+                  <p>{summary}</p>
+                </footer>
+              </article>
+            </li>
+          );
+        },
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  h3 {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import Section from "../Section.astro";
+import Badget from "../ui/Badget.astro";
+import { skills } from "@cv";
+import type { TIcons } from "@/types/type";
+
+import {
+  HtmlIcon,
+  CssIcon,
+  TsIcon,
+  JsIcon,
+  TailwindIcon,
+  MySQlIcon,
+  NodeIcon,
+  ReactIcon,
+  NextjsIcon,
+  GitIcon,
+  GithubIcon,
+} from "@/icons/index.astro";
+
+const ICONS: TIcons = {
+  HTML: HtmlIcon,
+  CSS: CssIcon,
+  TypeScript: TsIcon,
+  JavaScript: JsIcon,
+  "Tailwind CSS": TailwindIcon,
+  MySQL: MySQlIcon,
+  Node: NodeIcon,
+  React: ReactIcon,
+  "Next.js": NextjsIcon,
+  Git: GitIcon,
+  GitHub: GithubIcon,
+};
+---
+
+<Section title="Habilidades">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const Icon = ICONS[name];
+
+        return (
+          <li>
+            <Badget>
+              {Icon && <Icon width="16" height="16" />}
+              {name}
+            </Badget>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>

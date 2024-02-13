@@ -1,0 +1,169 @@
+---
+import { basics, languages } from "@cv";
+import type { TIcons } from "@/types/type";
+import Section from "@/components/Section.astro";
+
+import {
+  MapPinIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  CallIcon,
+  Language,
+} from "@/icons/index.astro";
+import LanguageIcon from "@/icons/LanguageIcon.astro";
+
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region, countryCode } = location;
+
+const SOCIAL_ICONS: TIcons = {
+  LinkedIn: LinkedinIcon,
+  GitHub: GithubIcon,
+};
+
+const printInfo = [email, phone].filter(Boolean).join(" | ");
+---
+
+<Section>
+  <div class="container">
+    <div class="hero">
+      <h1>{name}</h1>
+      <h2>{label}</h2>
+      <span>
+        <MapPinIcon width="16" height="16" />
+        {city}, {region}, {countryCode}
+      </span>
+      {
+        languages && (
+          <span>
+            <LanguageIcon width="16" height="16" />
+
+            {languages.map(({ language }) => (
+              <span>{language}</span>
+            ))}
+          </span>
+        )
+      }
+      <footer class="print">
+        {printInfo}
+      </footer>
+      <footer class="no-print">
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`Enviar un email a ${name} al correo ${email}`}
+              aria-label={`Enviar un email a ${name} al correo ${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MailIcon width="20" height="20" aria-hidden="true" />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`tel:${phone}`}
+              title={`LLamar por teléfono a ${name} al número ${phone}`}
+              aria-label={`LLamar por teléfono a ${name} al número ${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CallIcon width="20" height="20" aria-hidden="true" />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
+
+            return (
+              <a
+                href={url}
+                title={`Visita mi perfil en ${network}`}
+                aria-label={`Visita mi perfil en ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon width="20" height="20" aria-hidden="true" />
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+
+    <figure><img src={image} alt={`Avatar of ${name}`} /></figure>
+  </div>
+</Section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .hero span {
+    color: var(--secondary);
+    font-family: monospace;
+  }
+
+  span,
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  footer a {
+    color: currentColor;
+    text-decoration: none;
+    padding: 4px;
+    border: 6px;
+    transition: 0.3s ease;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 128px;
+    border-radius: 50%;
+  }
+
+  @media (hover: hover) {
+    footer a:hover {
+      color: var(--secondary);
+    }
+  }
+
+  @media (width > 600px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .hero {
+      align-items: flex-start;
+    }
+  }
+</style>

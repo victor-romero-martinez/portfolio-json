@@ -1,0 +1,54 @@
+---
+import Section from "@/components/Section.astro";
+import { getYearsFn } from "@/lib/getYearsFn";
+import YearsComponent from "@/components/ui/YearsComponent.astro";
+
+import { education } from "@cv";
+---
+
+<Section title="Educación">
+  <ul>
+    {
+      education.map(({ institution, startDate, endDate, area }) => {
+        const years = getYearsFn(startDate, endDate);
+
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>{institution}</h3>
+                </div>
+
+                <YearsComponent>{years}</YearsComponent>
+              </header>
+
+              <footer>
+                <p>{area}</p>
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  h3 {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+</style>

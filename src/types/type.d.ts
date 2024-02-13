@@ -1,0 +1,1 @@
+export type TIcons = Record<string, string | any>

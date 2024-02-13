@@ -1,0 +1,19 @@
+---
+import { CalendarIcon } from "@/icons/index.astro";
+---
+
+<span class="time">
+  <CalendarIcon width="16" height="16" />
+  <time>
+    <slot />
+  </time>
+</span>
+
+<style>
+  .time {
+    color: var(--terciary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+</style>

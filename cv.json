@@ -1,0 +1,271 @@
+{
+  "basics": {
+    "name": "Victor Romero",
+    "label": "Front Developer Junior",
+    "image": "/me.webp",
+    "email": "victordav147@gmail.com",
+    "phone": "+595 986670992",
+    "url": "",
+    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "location": {
+      "address": "Sg. Lopez Godoy",
+      "postalCode": "",
+      "city": "Capiatá",
+      "countryCode": "PY",
+      "region": "Central"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Victor David Romero",
+        "url": "https://www.linkedin.com/in/victor-david-romero-63149224b"
+      },
+      {
+        "network": "GitHub",
+        "username": "Victor Romero",
+        "url": "https://github.com/victor-romero-martinez"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Integral Trading S.A.",
+      "position": "Cajero",
+      "url": "https://www.combustiblesintegral.com.py",
+      "startDate": "2019-10-01",
+      "endDate": "2023-01-15",
+      "summary": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "category": "Ritail",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Ecofull S.R.L.",
+      "position": "Cajero",
+      "url": null,
+      "startDate": "2015-04-01",
+      "endDate": "2019-10-01",
+      "summary": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "category": "Ritail",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "position": "",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Col. Nac. Tajy Poty",
+      "url": null,
+      "area": "Bachiller Científico",
+      "studyType": "Bachelor",
+      "startDate": "2011-02-01",
+      "endDate": "2013-11-15",
+      "score": "4.5",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Intermedio",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español,",
+      "fluency": "Hablante Nativo"
+    },
+    {
+      "language": "Inglés A1,",
+      "fluency": "Basic"
+    },
+    {
+      "language": "Guaraní",
+      "fluency": "Hablante Nativo"
+    }
+  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": []
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Happy Shopping",
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-22",
+      "isActive": false,
+      "description": "Practica Frontend de una tienda",
+      "highlights": [
+        "e-Comerce",
+        "Electrónicos",
+        "Marketplace"
+      ],
+      "url": "https://eshop-tau-six.vercel.app/",
+      "imageUrl": "https://github.com/victor-romero-martinez/eshop/blob/main/public/opengraph-image.webp",
+      "github": null
+    },
+    {
+      "name": "KFC no ofical",
+      "startDate": "2024-01-24",
+      "endDate": "2024-02-7",
+      "isActive": false,
+      "description": "Practica Frontend de una imaginación de la web de KFC",
+      "highlights": [
+        "e-Comerce",
+        "Fast food"
+      ],
+      "url": "https://eshop-tau-six.vercel.app/",
+      "imageUrl": "https://github.com/victor-romero-martinez/burger-page/blob/main/public/opengraph-image.webp",
+      "github": null
+    }
+  ]
+}

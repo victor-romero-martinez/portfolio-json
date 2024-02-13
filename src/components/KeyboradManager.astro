@@ -1,0 +1,206 @@
+---
+import { type TIcons } from "@/types/type";
+import { basics } from "@cv";
+import { CommandIcon } from "@/icons/index.astro";
+import { linkedinSGV, githubSVG } from "@/components/ui/svg/iconSvg";
+
+const { profiles } = basics;
+
+// debe ser un string los icono y no un componente
+const ICONS: TIcons = {
+  LinkedIn: linkedinSGV,
+  GitHub: githubSVG,
+};
+
+const profileInfo = profiles.map(({ network, url }) => {
+  const icon = ICONS[network];
+  const firtsLetter = network[0].toLocaleUpperCase();
+
+  return {
+    id: network,
+    section: "Social",
+    title: `Ver perfil en ${network}`,
+    url,
+    icon,
+    hotkey: `Ctrl+${firtsLetter}`,
+  };
+});
+---
+
+<footer id="normal-footer" class="no-print">
+  Pulsa <kbd>Ctrl</kbd> + <kbd>k</kbd> para abrir la paleta de comandos.
+</footer>
+
+<div id="button-footer" class="no-print">
+  <CommandIcon />
+</div>
+
+<ninja-keys
+  data-info={JSON.stringify(profileInfo)}
+  placeholder="Buscar comando"
+  hideBreadcrumbs
+  class="dark"></ninja-keys>
+
+<script>
+  import "ninja-keys";
+  import { printerSVG, githubSVG } from "./ui/svg/iconSvg";
+
+  type Info = {
+    id: string;
+    section: string;
+    title: string;
+    url: string;
+    icon: string;
+    hotkey: string;
+  };
+
+  // recuperar elementos
+  const ninja = document.querySelector("ninja-keys");
+
+  const footerButton = document.getElementById("button-footer");
+
+  footerButton?.addEventListener("click", () => {
+    var event = new KeyboardEvent("keydown", {
+      key: "K",
+      code: "Keyk",
+      keyCode: 75,
+      which: 75,
+      ctrlKey: true,
+      altKey: false,
+      shiftKey: false,
+      metaKey: false,
+    });
+
+    document.dispatchEvent(event);
+  });
+
+  if (ninja != null) {
+    const info = ninja.getAttribute("data-info") ?? "[]";
+    const parsedInfo = JSON.parse(info);
+
+    const data = parsedInfo.map(
+      ({ url, hotkey, icon, id, section, title }: Info) => {
+        return {
+          id,
+          title,
+          icon,
+          hotkey,
+          section,
+          handler: () => window.open(url, "_blank"),
+        };
+      },
+    );
+
+    ninja.data = [
+      {
+        id: "print",
+        title: "Imprimir",
+        icon: printerSVG,
+        hotkey: "Ctrl+P",
+        section: "Acciones",
+        handler: () => window.print(),
+      },
+      ...data,
+      {
+        id: "credit",
+        title: "Repositorio de midudev",
+        icon: githubSVG,
+        hotkey: "Ctrl+Alt+C",
+        section: "Créditos a",
+        handler: () =>
+          window.open(
+            "https://github.com/midudev/minimalist-portfolio-json",
+            "_blank",
+          ),
+      },
+    ];
+  }
+</script>
+
+<style>
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-block: 8px;
+    text-align: center;
+    font-size: large;
+    font-family: monospace;
+  }
+
+  footer,
+  #button-footer {
+    background-color: var(--bg-secondary);
+
+    view-timeline-name: --revealing;
+    view-timeline-axis: block;
+
+    animation: linear 0.3s fadeIn;
+    animation-timeline: --revealing;
+    animation-range: entry 100% cover 10%;
+  }
+
+  kbd {
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.8rem;
+  }
+
+  #normal-footer {
+    display: none;
+  }
+
+  #button-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* ninja-keys custom */
+  ninja-keys {
+    --ninja-width: 540px;
+    --ninja-modal-background: var(--bg-color);
+    --ninja-footer-background: var(--bg-color);
+    --ninja-text-color: var(--paragraph);
+    --ninja-selected-background: var(--bg-secondary);
+    --ninja-secondary-background-color: var(--bg-secondary);
+  }
+
+  ninja-keys::part(ninja-action),
+  ninja-keys::part(ninja-social) {
+    gap: 8px;
+  }
+
+  ninja-keys::part(ninja-selected) {
+    --ninja-secondary-background-color: var(--bg-color);
+  }
+
+  /* media query */
+  @media (width > 600px) {
+    #normal-footer {
+      display: block;
+    }
+
+    #button-footer {
+      display: none;
+    }
+  }
+</style>
