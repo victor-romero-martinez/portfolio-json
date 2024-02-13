@@ -209,6 +209,15 @@
         "JavaScript Library",
         "UI"
       ]
+    },
+    {
+      "name": "Linux",
+      "level": "Intermedio",
+      "keywords": [
+        "Terminal",
+        "Bash",
+        "GNU"
+      ]
     }
   ],
   "languages": [
