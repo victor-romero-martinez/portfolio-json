@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Victor Romero",
-    "label": "Front Developer Junior",
+    "label": "Frontend Developer Junior",
     "image": "/me.webp",
     "email": "victordav147@gmail.com",
     "phone": "+595 986670992",
@@ -34,8 +34,8 @@
       "url": "https://www.combustiblesintegral.com.py",
       "startDate": "2019-10-01",
       "endDate": "2023-01-15",
-      "summary": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-      "category": "Ritail",
+      "summary": "Como cajero de una tienda realizaba varias actividades además de atender y cobrar a los clientes, tales como recepción y reposición de los productos, realización de inventarios y la limpieza del local.",
+      "category": "Retail",
       "highlights": [
         "Started the company"
       ]
@@ -46,8 +46,8 @@
       "url": null,
       "startDate": "2015-04-01",
       "endDate": "2019-10-01",
-      "summary": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-      "category": "Ritail",
+      "summary": "Responsable de atención al cliente, cobranza, gestión del deposito, realización de inventarios, control de stock, limpieza y exhibición de los productos.",
+      "category": "Retail",
       "highlights": [
         "Started the company"
       ]
@@ -252,28 +252,26 @@
       "startDate": "2024-01-01",
       "endDate": "2024-01-22",
       "isActive": false,
-      "description": "Practica Frontend de una tienda",
+      "description": "Practica Frontend de una tienda, usando Next.js, Zustand y actions servers.",
       "highlights": [
-        "e-Comerce",
+        "e-Commerce",
         "Electrónicos",
         "Marketplace"
       ],
       "url": "https://eshop-tau-six.vercel.app/",
-      "imageUrl": "https://github.com/victor-romero-martinez/eshop/blob/main/public/opengraph-image.webp",
       "github": null
     },
     {
-      "name": "KFC no ofical",
+      "name": "KFC no oficial",
       "startDate": "2024-01-24",
       "endDate": "2024-02-7",
       "isActive": false,
-      "description": "Practica Frontend de una imaginación de la web de KFC",
+      "description": "Re-imaginación de la web de KFC.",
       "highlights": [
-        "e-Comerce",
+        "e-Commerce",
         "Fast food"
       ],
-      "url": "https://eshop-tau-six.vercel.app/",
-      "imageUrl": "https://github.com/victor-romero-martinez/burger-page/blob/main/public/opengraph-image.webp",
+      "url": "https://kfc-no-oficial-page.vercel.app/",
       "github": null
     }
   ]
