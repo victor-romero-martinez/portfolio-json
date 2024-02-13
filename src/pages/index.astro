@@ -2,12 +2,12 @@
 import Layout from "@/layout/Layout.astro";
 import { basics } from "@cv";
 import Hero from "@/components/sections/Hero.astro";
-import Abaout from "@/components/sections/Abaout.astro";
+import About from "@/components/sections/About.astro";
 import Experience from "@/components/sections/Experience.astro";
-import Education from "@/components/sections/Educadion.astro";
+import Education from "@/components/sections/Education.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
-import KeyboradManager from "@/components/KeyboradManager.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
 
 const { name, label } = basics;
 ---
@@ -16,18 +16,18 @@ const { name, label } = basics;
 	<main>
 		<Hero />
 
-		<Abaout />
+		<About />
+
+		<Projects />
 
 		<Experience />
 
 		<Education />
 
-		<Projects />
-
 		<Skills />
 	</main>
 
-	<KeyboradManager />
+	<KeyboardManager />
 </Layout>
 
 <style>
