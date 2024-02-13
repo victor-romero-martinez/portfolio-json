@@ -10,15 +10,7 @@ import { projects } from "@cv";
   <ul>
     {
       projects.map(
-        ({
-          url,
-          imageUrl,
-          highlights,
-          description,
-          name,
-          isActive,
-          github,
-        }) => (
+        ({ url, highlights, description, name, isActive, github }) => (
           <li>
             <article>
               <div>
@@ -85,10 +77,10 @@ import { projects } from "@cv";
   }
 
   article {
-    border-radius: 0.4vmax;
+    border-radius: 0.6vmax;
     border: 1px solid var(--bg-secondary);
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem;
     height: 100%;
   }
 
