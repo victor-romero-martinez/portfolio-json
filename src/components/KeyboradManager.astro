@@ -43,7 +43,7 @@ const profileInfo = profiles.map(({ network, url }) => {
 
 <script>
   import "ninja-keys";
-  import { printerSVG, githubSVG } from "./ui/svg/iconSvg";
+  import { printerSVG, githubSVG, downloadSVG } from "./ui/svg/iconSvg";
 
   type Info = {
     id: string;
@@ -100,12 +100,20 @@ const profileInfo = profiles.map(({ network, url }) => {
         section: "Acciones",
         handler: () => window.print(),
       },
+      {
+        id: "download",
+        title: "Descargar PDF",
+        icon: downloadSVG,
+        hotkey: "Ctrl+Shift+D",
+        section: "Acciones",
+        handler: () => window.alert("Descargando"),
+      },
       ...data,
       {
         id: "credit",
         title: "Repositorio de midudev",
         icon: githubSVG,
-        hotkey: "Ctrl+Alt+C",
+        hotkey: "Ctrl+Shift+C",
         section: "Créditos a",
         handler: () =>
           window.open(
