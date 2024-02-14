@@ -12,20 +12,15 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
-│   ├── pages/
-│   │   └── index.astro
-│   ├── layout/
-│   │   └── layout.astro
-│   ├── icons/
-│   │   └── ...icon.astro
-│   ├── libs/
-│   │   └── getYearsFn.ts
-│   ├── types/
-│   │   └── type.d.ts
-│   └── componensts/
-│       ├── component/
-│       ├── ui/
-│       └── componensts.astro
+│    ├───components
+│    │   ├───sections
+│    │   └───ui
+│    │       └───svg
+│    ├───icons
+│    ├───layout
+│    ├───lib
+│    ├───pages
+│    └───types
 └── package.json
 ```
 
