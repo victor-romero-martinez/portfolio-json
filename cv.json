@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Victor Romero",
-    "label": "Frontend Developer Junior",
+    "label": "Front-end Developer Junior",
     "image": "/me.webp",
     "email": "victordav147@gmail.com",
     "phone": "+595 986670992",
     "url": "",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "summary": "Soy Victor Romero aunque mis amigos me llaman vic, un desarrollador frontend junior autodidacta en busca de mi primer trabajo en el sector. Tengo experiencia con HTML, CSS, JavaScript y otras herramientas. Anteriormente trabajé como cajero en un retail minorista.",
     "location": {
       "address": "Sg. Lopez Godoy",
       "postalCode": "",
@@ -252,7 +252,7 @@
       "startDate": "2024-01-01",
       "endDate": "2024-01-22",
       "isActive": false,
-      "description": "Practica Frontend de una tienda, usando Next.js, Zustand y actions servers.",
+      "description": "Practica Front-end de una tienda, usando Next.js, Zustand y actions servers.",
       "highlights": [
         "e-Commerce",
         "Electrónicos",
