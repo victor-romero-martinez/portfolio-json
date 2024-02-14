@@ -13,7 +13,7 @@ import {
 } from "@/icons/index.astro";
 import LanguageIcon from "@/icons/LanguageIcon.astro";
 
-const { name, label, image, location, profiles, phone, email } = basics;
+const { name, label, image, location, profiles, phone, email, url } = basics;
 const { city, region, countryCode } = location;
 
 const SOCIAL_ICONS: TIcons = {
@@ -21,7 +21,7 @@ const SOCIAL_ICONS: TIcons = {
   GitHub: GithubIcon,
 };
 
-const printInfo = [email, phone].filter(Boolean).join(" | ");
+const printInfo = [email, url, phone].filter(Boolean).join(" | ");
 ---
 
 <Section>
