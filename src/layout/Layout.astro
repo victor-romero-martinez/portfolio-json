@@ -118,11 +118,6 @@ const { summary } = basics;
     text-decoration: none;
   }
 
-  span:has(svg) {
-    display: grid;
-    place-items: center;
-  }
-
   /* my styles */
   body {
     max-width: 700px;
@@ -135,6 +130,15 @@ const { summary } = basics;
     display: none !important;
   }
 
+  span:has(svg) {
+    min-width: fit-content;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* @medias */
   @media (hover: hover) {
     a:hover {
       color: var(--primary);
