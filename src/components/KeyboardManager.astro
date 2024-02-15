@@ -108,11 +108,11 @@ const profileInfo = profiles.map(({ network, url }) => {
         section: "Acciones",
         handler: () => {
           let download = document.createElement("a");
-          console.log("download: ", download);
-          download.setAttribute(
-            "download",
-            "https://portfolio-json-ten.vercel.app/assets/Portfolio_de_Victor_Romero_Front-end_Developer.pdf",
-          );
+          const path = window.location;
+          const nameFile = "Portfolio_de_Victor_Romero_Front-end_Developer";
+
+          download.setAttribute("href", path + "assets/" + nameFile + ".pdf");
+          download.setAttribute("download", nameFile);
 
           download.style.display = "none";
           document.body.appendChild(download);
@@ -128,7 +128,7 @@ const profileInfo = profiles.map(({ network, url }) => {
         title: "Repositorio de midudev",
         icon: githubSVG,
         hotkey: "Ctrl+Shift+C",
-        section: "Fuentes",
+        section: "Créditos",
         handler: () =>
           window.open(
             "https://github.com/midudev/minimalist-portfolio-json",
