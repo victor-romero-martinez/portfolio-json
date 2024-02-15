@@ -2,6 +2,7 @@
 import { basics, languages } from "@cv";
 import type { TIcons } from "@/types/type";
 import Section from "@/components/Section.astro";
+import { fixPhoneNumber } from "@/lib/fixPhoneNumber";
 
 import {
   MapPinIcon,
@@ -9,9 +10,9 @@ import {
   LinkedinIcon,
   MailIcon,
   CallIcon,
-  Language,
+  LanguageIcon,
+  WhatsappIcon,
 } from "@/icons/index.astro";
-import LanguageIcon from "@/icons/LanguageIcon.astro";
 
 const { name, label, image, location, profiles, phone, email, url } = basics;
 const { city, region, countryCode } = location;
@@ -22,6 +23,8 @@ const SOCIAL_ICONS: TIcons = {
 };
 
 const printInfo = [email, url, phone].filter(Boolean).join(" | ");
+
+const newPhoneNumber = fixPhoneNumber(phone);
 ---
 
 <Section>
@@ -64,13 +67,26 @@ const printInfo = [email, url, phone].filter(Boolean).join(" | ");
         {
           phone && (
             <a
-              href={`tel:${phone}`}
+              href={`tel:${newPhoneNumber}`}
               title={`LLamar por teléfono a ${name} al número ${phone}`}
               aria-label={`LLamar por teléfono a ${name} al número ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <CallIcon width="20" height="20" aria-hidden="true" />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`https://wa.me/${newPhoneNumber}`}
+              title={`Enviar un mensaje a ${name} al número ${phone}`}
+              aria-label={`Enviar un mensaje a ${name} al número ${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsappIcon width="20" height="20" aria-hidden="true" />
             </a>
           )
         }
