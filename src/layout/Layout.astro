@@ -93,12 +93,33 @@ const { summary } = basics;
     text-wrap: balance;
   }
 
+  h3 {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.06rem;
+    margin-bottom: 4px;
+  }
+
   p {
     font-family: monospace;
     text-wrap: pretty;
     line-height: 1.5;
     font-size: large;
     margin: 0;
+  }
+
+  a {
+    color: currentColor;
+  }
+
+  span:has(svg) {
+    display: grid;
+    place-items: center;
   }
 
   /* my styles */
@@ -118,7 +139,7 @@ const { summary } = basics;
       --bg-secondary: #e2e2d6;
       --paragraph: #70706a;
       --primary: #242422;
-      --secondary: #4a4a46;
+      --secondary: #70706a;
       --terciary: #242422;
     }
 
