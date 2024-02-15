@@ -1,0 +1,86 @@
+---
+import Section from "../Section.astro";
+import YearsComponent from "../ui/YearsComponent.astro";
+import { certificates } from "@cv";
+
+import { WorldShareIcon, CertificateIcon } from "@/icons/index.astro";
+---
+
+<Section title="Certificados">
+  <ul>
+    {
+      certificates.map(({ name, date, url, issuer }) => {
+        const year = new Date(date).toISOString().split("T")[0];
+
+        return (
+          <li>
+            <article>
+              <div>
+                <h3>{name}</h3>
+                {url && (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={"Certificado del curso: " + name}
+                    aria-label={"Certificado del curso: " + name}
+                  >
+                    <WorldShareIcon width="18" height="18" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+
+              <div>
+                <h4>{issuer}</h4>
+
+                <YearsComponent>
+                  <span slot="icon" class="year">
+                    <CertificateIcon width="16" height="16" />
+                  </span>
+                  <span class="year">{year}</span>
+                </YearsComponent>
+              </div>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  article div {
+    display: inline-flex;
+  }
+
+  article div:first-child {
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  article div:last-child {
+    align-items: center;
+    gap: 16px;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .year {
+    color: var(--paragraph);
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      color: var(--primary);
+    }
+  }
+</style>

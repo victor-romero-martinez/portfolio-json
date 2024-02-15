@@ -90,10 +90,22 @@
   ],
   "certificates": [
     {
-      "name": "",
-      "date": "",
-      "issuer": "",
-      "url": ""
+      "name": "React Native: Manejo de Listas y Consumo de APIs",
+      "date": "2023-07-23",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/vic147/curso/2557-react-native-listas-apis/diploma/detalle/"
+    },
+    {
+      "name": "Full Stack Developer con JavaScript",
+      "date": "2023-04-25",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/vic147/ruta/100-javascript-full-stack/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Backend con Node.js: Base de Datos con PostgreSQL",
+      "date": "2023-04-21",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/vic147/curso/2507-backend-nodejs-postgres/diploma/detalle/"
     }
   ],
   "publications": [
@@ -266,7 +278,7 @@
       "startDate": "2024-01-24",
       "endDate": "2024-02-7",
       "isActive": false,
-      "description": "Re-imaginación de la web de KFC.",
+      "description": "Re-imaginación de la web de KFC incluye un mapa interactivo.",
       "highlights": [
         "e-Commerce",
         "Fast food"

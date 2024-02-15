@@ -1,9 +1,5 @@
----
-import { CalendarIcon } from "@/icons/index.astro";
----
-
 <span class="time">
-  <CalendarIcon width="16" height="16" />
+  <slot name="icon" />
   <time>
     <slot />
   </time>
