@@ -2,6 +2,7 @@
 import Section from "@/components/Section.astro";
 import { getYearsFn } from "@/lib/getYearsFn";
 import YearsComponent from "@/components/ui/YearsComponent.astro";
+import { CalendarIcon } from "@/icons/index.astro";
 
 import { education } from "@cv";
 ---
@@ -20,7 +21,12 @@ import { education } from "@cv";
                   <h3>{institution}</h3>
                 </div>
 
-                <YearsComponent>{years}</YearsComponent>
+                <YearsComponent>
+                  <span slot="icon">
+                    <CalendarIcon width="16" height="16" />
+                  </span>
+                  {years}
+                </YearsComponent>
               </header>
 
               <footer>
