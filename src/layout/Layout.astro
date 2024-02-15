@@ -115,6 +115,7 @@ const { summary } = basics;
 
   a {
     color: currentColor;
+    text-decoration: none;
   }
 
   span:has(svg) {
@@ -132,6 +133,13 @@ const { summary } = basics;
 
   .print {
     display: none !important;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
   }
 
   @media print {
