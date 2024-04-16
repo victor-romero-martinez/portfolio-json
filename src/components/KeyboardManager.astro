@@ -43,7 +43,7 @@ const profileInfo = profiles.map(({ network, url }) => {
 
 <script>
   import "ninja-keys";
-  import { printerSVG, githubSVG, downloadSVG } from "./ui/svg/iconSvg";
+  import { downloadSVG, githubSVG, printerSVG } from "./ui/svg/iconSvg";
 
   type Info = {
     id: string;
@@ -88,7 +88,7 @@ const profileInfo = profiles.map(({ network, url }) => {
           section,
           handler: () => window.open(url, "_blank"),
         };
-      },
+      }
     );
 
     ninja.data = [
@@ -109,7 +109,7 @@ const profileInfo = profiles.map(({ network, url }) => {
         handler: () => {
           let download = document.createElement("a");
           const path = window.location;
-          const nameFile = "Portfolio_de_Victor_Romero_Front-end_Developer";
+          const nameFile = "Victor_Romero_Portfolio";
 
           download.setAttribute("href", path + "assets/" + nameFile + ".pdf");
           download.setAttribute("download", nameFile);
@@ -132,7 +132,7 @@ const profileInfo = profiles.map(({ network, url }) => {
         handler: () =>
           window.open(
             "https://github.com/midudev/minimalist-portfolio-json",
-            "_blank",
+            "_blank"
           ),
       },
     ];
