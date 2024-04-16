@@ -1,7 +1,7 @@
 ---
 import Section from "@/components/Section.astro";
-import GithubIcon from "@/icons/GithubIcon.astro";
 import Badget from "@/components/ui/Badget.astro";
+import GithubIcon from "@/icons/GithubIcon.astro";
 
 import { projects } from "@cv";
 ---
@@ -25,7 +25,7 @@ import { projects } from "@cv";
                       {name}
                     </a>
                   </h3>
-                  {isActive && <span class="dot">•</span>}
+                  {isActive && <span class="dot no-print">•</span>}
                   {github && (
                     <a
                       href={github}
@@ -53,7 +53,7 @@ import { projects } from "@cv";
               </footer>
             </article>
           </li>
-        ),
+        )
       )
     }
   </ul>
