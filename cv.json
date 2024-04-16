@@ -260,6 +260,33 @@
   ],
   "projects": [
     {
+      "name": "Óptica",
+      "startDate": "2024-04-02",
+      "endDate": "2024-04-16",
+      "isActive": true,
+      "description": "Backend usando NestJS y PostgreSQL.",
+      "highlights": [
+        "e-Commerce",
+        "health",
+        "Marketplace"
+      ],
+      "url": "https://weak-ruby-llama-tam.cyclic.app/docs",
+      "github": "https://github.com/victor-romero-martinez/optica-backend"
+    },
+    {
+      "name": "KFC no oficial",
+      "startDate": "2024-01-24",
+      "endDate": "2024-02-07",
+      "isActive": false,
+      "description": "Re-imaginación de la web de KFC incluye un mapa interactivo.",
+      "highlights": [
+        "e-Commerce",
+        "Fast food"
+      ],
+      "url": "https://kfc-no-oficial-page.vercel.app/",
+      "github": null
+    },
+    {
       "name": "Happy Shopping",
       "startDate": "2024-01-01",
       "endDate": "2024-01-22",
@@ -271,19 +298,6 @@
         "Marketplace"
       ],
       "url": "https://eshop-tau-six.vercel.app/",
-      "github": null
-    },
-    {
-      "name": "KFC no oficial",
-      "startDate": "2024-01-24",
-      "endDate": "2024-02-7",
-      "isActive": false,
-      "description": "Re-imaginación de la web de KFC incluye un mapa interactivo.",
-      "highlights": [
-        "e-Commerce",
-        "Fast food"
-      ],
-      "url": "https://kfc-no-oficial-page.vercel.app/",
       "github": null
     }
   ]
