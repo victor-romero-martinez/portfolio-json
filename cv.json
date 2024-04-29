@@ -4,7 +4,8 @@
     "label": "Front-end Developer Junior",
     "image": "/me.webp",
     "email": "victordav147@gmail.com",
-    "phone": "+595 986 670992",
+    "phone": 986670992,
+    "regionCode": 595,
     "url": "https://portfolio-json-ten.vercel.app",
     "summary": "Soy Victor Romero aunque mis amigos me llaman vic, un desarrollador frontend junior autodidacta en busca de mi primer trabajo en el sector. Tengo experiencia con HTML, CSS, JavaScript y otras herramientas. Anteriormente trabajé como cajero en un retail minorista.",
     "location": {

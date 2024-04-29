@@ -1,20 +1,30 @@
 ---
-import { basics, languages } from "@cv";
-import type { TIcons } from "@/types/type";
 import Section from "@/components/Section.astro";
-import { fixPhoneNumber } from "@/lib/fixPhoneNumber";
+import type { TIcons } from "@/types/type";
+import { basics, languages } from "@cv";
 
 import {
-  MapPinIcon,
+  CallIcon,
   GithubIcon,
+  LanguageIcon,
   LinkedinIcon,
   MailIcon,
-  CallIcon,
-  LanguageIcon,
+  MapPinIcon,
   WhatsappIcon,
 } from "@/icons/index.astro";
+import { formatPhone } from "@/lib/formatterPhone";
 
-const { name, label, image, location, profiles, phone, email, url } = basics;
+const {
+  name,
+  label,
+  image,
+  location,
+  profiles,
+  phone,
+  regionCode,
+  email,
+  url,
+} = basics;
 const { city, region, countryCode } = location;
 
 const SOCIAL_ICONS: TIcons = {
@@ -22,9 +32,9 @@ const SOCIAL_ICONS: TIcons = {
   GitHub: GithubIcon,
 };
 
-const printInfo = [email, url, phone].filter(Boolean).join(" | ");
+const [phoneLarge, phoneFormat] = formatPhone(regionCode, phone);
 
-const newPhoneNumber = fixPhoneNumber(phone);
+const printInfo = [email, url, phoneFormat].filter(Boolean).join(" | ");
 ---
 
 <Section>
@@ -67,9 +77,9 @@ const newPhoneNumber = fixPhoneNumber(phone);
         {
           phone && (
             <a
-              href={`tel:${newPhoneNumber}`}
-              title={`LLamar por teléfono a ${name} al número ${phone}`}
-              aria-label={`LLamar por teléfono a ${name} al número ${phone}`}
+              href={`tel:${phoneLarge}`}
+              title={`LLamar por teléfono a ${name} al número ${phoneFormat}`}
+              aria-label={`LLamar por teléfono a ${name} al número ${phoneFormat}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -80,9 +90,9 @@ const newPhoneNumber = fixPhoneNumber(phone);
         {
           phone && (
             <a
-              href={`https://wa.me/${newPhoneNumber}`}
-              title={`Enviar un mensaje a ${name} al número ${phone}`}
-              aria-label={`Enviar un mensaje a ${name} al número ${phone}`}
+              href={`https://wa.me/${phoneLarge}`}
+              title={`Enviar un mensaje a ${name} al número ${phoneFormat}`}
+              aria-label={`Enviar un mensaje a ${name} al número ${phoneFormat}`}
               target="_blank"
               rel="noopener noreferrer"
             >
