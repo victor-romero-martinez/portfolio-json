@@ -120,7 +120,7 @@
   ],
   "skills": [
     {
-      "name": "HTML",
+      "name": "HTML5",
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "name": "CSS",
+      "name": "CSS3",
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web",
