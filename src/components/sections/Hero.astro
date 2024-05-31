@@ -141,7 +141,7 @@ const printInfo = [email, url, phoneFormat].filter(Boolean).join(" | ");
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h2 {
@@ -164,7 +164,7 @@ const printInfo = [email, url, phoneFormat].filter(Boolean).join(" | ");
 
   footer a {
     text-decoration: none;
-    padding: 4px;
+    padding: 2px 4px;
     border: 6px;
     transition: 0.3s ease;
   }
@@ -175,12 +175,13 @@ const printInfo = [email, url, phoneFormat].filter(Boolean).join(" | ");
     object-position: center;
     width: 128px;
     border-radius: 50%;
-    outline: 1px solid var(--bg-secondary);
+    outline: 2px solid var(--bg-secondary);
   }
 
   @media (hover: hover) {
     footer a:hover {
       color: var(--secondary);
+      background-color: var(--bg-secondary);
     }
   }
 
