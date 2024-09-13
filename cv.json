@@ -261,18 +261,18 @@
   ],
   "projects": [
     {
-      "name": "Óptica",
-      "startDate": "2024-04-02",
-      "endDate": "2024-04-16",
-      "isActive": false,
-      "description": "Backend usando NestJS y PostgreSQL.",
+      "name": "Space Umpact",
+      "startDate": "2024-07-02",
+      "endDate": "2024-08-13",
+      "isActive": true,
+      "description": "Un juego hecho con Godot 4 del clásico juego Space Impact.",
       "highlights": [
-        "e-Commerce",
-        "health",
-        "Marketplace"
+        "spaceship",
+        "alien",
+        "game"
       ],
-      "url": "https://weak-ruby-llama-tam.cyclic.app/docs",
-      "github": "https://github.com/victor-romero-martinez/optica-backend"
+      "url": "https://space-umpact.netlify.app",
+      "github": "https://github.com/victor-romero-martinez/space-umpact"
     },
     {
       "name": "KFC no oficial",
